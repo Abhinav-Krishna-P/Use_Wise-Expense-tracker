@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💸 AI Expense Tracker
 
 A beautiful, production-ready Flutter UI for an AI-powered personal expense tracker.
@@ -95,3 +96,9 @@ The mock layer is designed for easy backend replacement:
 ## License
 
 This project is for educational/portfolio purposes.
+=======
+# expense_tracker
+track  expenses  with  ai
+>>>>>>> b8152bc94967a82ca17ac6b010f8ffdf1ef0d793
+
+finished
