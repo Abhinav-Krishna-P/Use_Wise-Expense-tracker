@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#252525",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191919",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"],
+                        "body": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0c0f0f; /* inverse-surface for true dark mode feel */
+            color: #f9f9f9;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #5f5e5e;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body antialiased selection:bg-primary/30 font-display">
+<!-- TopAppBar -->
+<main class="px-6 max-w-2xl mx-auto min-h-screen py-12"><header class="mb-8 -ml-2">
+<button class="p-2 rounded-lg text-neutral-400 hover:text-neutral-100 hover:bg-neutral-800/50 transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">west</span>
+</button>
+</header>
+<!-- Theme Selection Section -->
+<section class="mb-12">
+<div class="flex flex-col gap-1 mb-6">
+<h2 class="font-display font-semibold text-xl tracking-tight text-neutral-100">Appearance</h2>
+<p class="font-body text-sm text-neutral-400">Customize how SpendWise looks on your device.</p>
+</div>
+<div class="flex p-1 bg-neutral-900 border border-neutral-800 rounded-xl w-full max-w-md">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium text-neutral-400 hover:text-neutral-200 transition-all duration-200">
+<span class="material-symbols-outlined text-lg">light_mode</span>
+<span>Light</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium bg-neutral-800 text-white shadow-sm ring-1 ring-neutral-700 transition-all duration-200">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+<span>Dark</span>
+</button>
+</div>
+</section>
+<!-- General Settings Section -->
+<section class="mb-12">
+<div class="flex flex-col gap-1 mb-6">
+<h2 class="font-headline font-semibold text-xl tracking-tight text-neutral-100">Preferences</h2>
+</div>
+<div class="flex flex-col bg-neutral-900/50 rounded-2xl overflow-hidden divide-y divide-neutral-800/50">
+<!-- Widget Toggle -->
+<div class="flex items-center justify-between p-5 hover:bg-neutral-800/30 transition-colors">
+<div class="flex gap-4 items-center">
+<div class="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-neutral-300" data-icon="widgets">widgets</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body font-medium text-neutral-100">Enable Home Screen Widgets</span>
+<span class="font-label text-xs text-neutral-500">Quick access to your budget at a glance</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-neutral-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Notification Setting (Extra for depth) -->
+<div class="flex items-center justify-between p-5 hover:bg-neutral-800/30 transition-colors cursor-pointer">
+<div class="flex gap-4 items-center">
+<div class="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-neutral-300" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body font-medium text-neutral-100">Push Notifications</span>
+<span class="font-label text-xs text-neutral-500">Manage daily summaries and alerts</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-neutral-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Currency Setting (Extra for depth) -->
+<div class="flex items-center justify-between p-5 hover:bg-neutral-800/30 transition-colors cursor-pointer">
+<div class="flex gap-4 items-center">
+<div class="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-neutral-300" data-icon="payments">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body font-medium text-neutral-100">Default Currency</span>
+<span class="font-label text-xs text-neutral-500">USD ($)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-neutral-600" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Account Section (Extra for depth) -->
+</main>
+<!-- BottomNavBar -->
+</body></html>

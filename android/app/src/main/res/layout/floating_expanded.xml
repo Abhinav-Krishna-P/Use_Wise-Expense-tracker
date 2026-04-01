@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expanded_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Transparent background — tap to collapse -->
+    <View
+        android:id="@+id/overlay_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Button cluster anchored to right-center -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/floating_expanded_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Camera button -->
+        <FrameLayout
+            android:id="@+id/camera_btn"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/floating_btn_orange"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_camera_white"
+                android:contentDescription="Camera" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp" />
+
+        <!-- SpendWise logo / close button -->
+        <FrameLayout
+            android:id="@+id/close_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/floating_btn_dark"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/widget_wallet_icon"
+                android:contentDescription="Close" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp" />
+
+        <!-- Mic button -->
+        <FrameLayout
+            android:id="@+id/mic_btn"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/floating_btn_teal"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mic_white"
+                android:contentDescription="Microphone" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
